@@ -1,0 +1,11 @@
+.Signup-images {
+  position: relative;
+  width: 100%;
+}
+
+.Signup-illustration {
+  position: relative;
+  z-index: 2;
+  bottom: -10%;
+  float: right;
+}
