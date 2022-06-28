@@ -22,17 +22,15 @@ export default function NavigationBar() {
           <Link href={ROUTELIST.HOME}>
             <Button variant="nav">{NAV_ITEM.HOME}</Button>
           </Link>
-          <Link href={ROUTELIST.ABOUT}>
-            <Button variant="nav">{NAV_ITEM.ABOUT}</Button>
-          </Link>
-          <Link href={ROUTELIST.MENTOR_MEET}>
-            <Button variant="nav">{NAV_ITEM.MENTOR_MEET}</Button>
-          </Link>
           <Link href={ROUTELIST.POST_ASSIGNMENT}>
             <Button variant="nav">{NAV_ITEM.POST_ASSIGNMENT}</Button>
           </Link>
           <Link href={ROUTELIST.BOOK_LIVE_SESSION}>
             <Button variant="nav">{NAV_ITEM.LIVE_SESSION}</Button>
+          </Link>
+
+          <Link href={ROUTELIST.ABOUT}>
+            <Button variant="nav">{NAV_ITEM.ABOUT}</Button>
           </Link>
           <Button variant="nav">{NAV_ITEM.WALLET}</Button>
           <Button variant="nav">{NAV_ITEM.CONTACT}</Button>

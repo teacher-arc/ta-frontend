@@ -4,7 +4,7 @@
   height: max-content;
 }
 
-input {
+.UploadButton-input {
   background-color: #444444;
   width: 100%;
   position: absolute;

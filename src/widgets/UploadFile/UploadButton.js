@@ -26,7 +26,7 @@ function UploadFile({ files, setFiles, removeFile }) {
   return (
     <Box className="UploadButton-main" width="100%">
       <div className="UploadButton-group">
-        <input type="file" />
+        <input type="file" className="UploadButton-input" />
         <Button
           leftIcon={<AiFillFileAdd boxSize={6} />}
           variant="inputCustom"

@@ -46,7 +46,12 @@ const Button = {
   },
   defaultProps: {},
 };
-
+const Textarea = {
+  baseStyle: {},
+  sizes: {},
+  variants: {},
+  defaultProps: {},
+};
 const Input = {
   baseStyle: {},
   sizes: {},
@@ -72,6 +77,7 @@ const theme = extendTheme({
     Box,
     Button,
     Input,
+    Textarea,
   },
 });
 
