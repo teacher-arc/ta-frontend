@@ -1,0 +1,15 @@
+.PostBook-main {
+  margin-left: 4rem;
+  margin-top: 2rem;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.BookPost-link {
+  padding: 2rem;
+}
+
+.PostAssignment-main {
+  position: relative;
+  z-index: 10;
+}

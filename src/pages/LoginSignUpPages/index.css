@@ -1,10 +1,10 @@
-.Signup-main{
-    height: 100vh;
-    overflow: hidden;
+.Signup-main {
+  height: 100vh;
+  overflow: hidden;
 }
 
-.SignUpForm-main{
-    margin-left: 2rem;
-    padding: 2rem;
-    top: 40%;
+.SignUpForm-main {
+  margin-left: 2rem;
+  padding: 2rem;
+  top: 40%;
 }

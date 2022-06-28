@@ -3,13 +3,14 @@ import PostAssignment from "./PostAssignment";
 import { Link } from "@chakra-ui/react";
 import * as ROUTESLIST from "./../../routes";
 import BookLiveSession from "./BookLiveSession";
-import RectangleIllustration from "../../widgets/RectangleIllustration";
+import PostBookIllustrations from "../../widgets/PostBookIllustrations";
+import "./index.css";
 function MentorMeet() {
   return (
-    <div>
-      <Link href={ROUTESLIST.POST_ASSIGNMENT}>Post Assignment</Link>
-      <Link href={ROUTESLIST.BOOK_LIVE_SESSION}>Book Live Session</Link>
-      <RectangleIllustration />
+    <div className="PostBook-main">
+      {/* TODO : Post illustration overlap with box */}
+      {/* <PostBookIllustrations /> */}
+      <PostAssignment />
     </div>
   );
 }

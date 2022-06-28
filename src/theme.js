@@ -1,91 +1,78 @@
-import { extendTheme } from "@chakra-ui/react"
-const Heading =  {
+import { extendTheme } from "@chakra-ui/react";
+const Heading = {
   baseStyle: {
-    color: '#003286',
-    padding: '8px 0 4px 0'
+    color: "#003286",
+    padding: "8px 0 4px 0",
   },
-  sizes: {
-  },
-  variants: {
-  },
-  defaultProps: {
-  },
+  sizes: {},
+  variants: {},
+  defaultProps: {},
 };
 
-const Text =  {
+const Text = {
   baseStyle: {
-    color: '#444444'
+    color: "#444444",
   },
-  sizes: {
-  },
-  variants: {
-  },
-  defaultProps: {
-  },
+  sizes: {},
+  variants: {},
+  defaultProps: {},
 };
 
 const Box = {
   baseStyle: {
-    borderRadius: '24px',
+    borderRadius: "24px",
   },
-  sizes: {
-  },
-  variants: {
-  },
-  defaultProps: {
-  },
+  sizes: {},
+  variants: {},
+  defaultProps: {},
 };
 
 const Button = {
   baseStyle: {
-    borderRadius: '20px',
+    borderRadius: "20px",
   },
-  sizes: {
-  },
+  sizes: {},
   variants: {
     solid: {
-      bg: '#003286',
-      color: '#FFFFFF',
-    }
+      bg: "#003286",
+      color: "#FFFFFF",
+    },
+    inputCustom: {
+      bg: "#FFFFFF",
+      color: "#444444",
+      padding: "4px",
+      cursor: "pointer",
+    },
   },
-  defaultProps: {
-  },
+  defaultProps: {},
 };
 
 const Input = {
-  baseStyle: {
-  },
-  sizes: {
-  },
-  variants: {
-  },
-  defaultProps: {
-  },
+  baseStyle: {},
+  sizes: {},
+  variants: {},
+  defaultProps: {},
 };
 
 const theme = extendTheme({
-    fonts: {
-        body: `"Exo 2", sans-serif`,
-        heading: `'Fredoka', sans-serif`,
-        mono: "Menlo, monospace",
-      },
-    styles: {
-        global: {
+  fonts: {
+    body: `"Exo 2", sans-serif`,
+    heading: `'Fredoka', sans-serif`,
+    mono: "Menlo, monospace",
+  },
+  styles: {
+    global: {},
+  },
+  shadows: {
+    "input-shadow": "0px 4px 15px 0px #B8D2FF",
+  },
+  components: {
+    Heading,
+    Text,
+    Box,
+    Button,
+    Input,
+  },
+});
 
-
-        }},
-    shadows: {
-      "input-shadow": "0px 4px 15px 0px #B8D2FF",
-    },
-    components: {
-      Heading,
-      Text,
-      Box,
-      Button,
-      Input
-      },
-    })
-    
-
-    
-    export default theme
+export default theme;

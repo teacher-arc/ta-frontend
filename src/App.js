@@ -1,9 +1,7 @@
 import { useState } from "react";
 import NotificationPanel from "./components/NotificationPanel";
-import UploadFile from "./widgets/UploadFile";
-import FileList from "./widgets/FileList";
 import Auth from "./pages/LoginSignUpPages";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Redirect } from "react-router-dom";
 import ProfilePage from "./pages/ProfilePage";
 import WalletPage from "./pages/WalletPage";
 import NavigationBar from "./widgets/NavigationBar";
@@ -27,16 +25,12 @@ function App() {
       <Routes>
         <Route path={ROUTELIST.HOME} element={<Home />} />
         <Route path={ROUTELIST.AUTH} element={<Auth />} />
-        <Route path={ROUTELIST.MENTOR_MEET} element={<MentorMeet />}>
-          <Route
-            path={ROUTELIST.POST_ASSIGNMENT}
-            element={<PostAssignment />}
-          />
-          <Route
-            path={ROUTELIST.BOOK_LIVE_SESSION}
-            element={<BookLiveSession />}
-          />
-        </Route>
+        <Route path={ROUTELIST.MENTOR_MEET} element={<MentorMeet />}></Route>
+        <Route path={ROUTELIST.POST_ASSIGNMENT} element={<PostAssignment />} />
+        <Route
+          path={ROUTELIST.BOOK_LIVE_SESSION}
+          element={<BookLiveSession />}
+        />
         <Route path="profile" element={<ProfilePage />} />
         <Route path="wallet" element={<WalletPage />} />
         {/* <Route path="postassignment" element={<PostAssignment/>}/>

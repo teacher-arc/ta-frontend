@@ -1,0 +1,53 @@
+.UploadButton-main {
+  position: relative;
+  cursor: pointer;
+  height: max-content;
+}
+
+input {
+  background-color: #444444;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.UploadButton-group {
+  cursor: pointer;
+}
+
+.UploadButton-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  color: #444444;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: 1em;
+  transition: background-color 0.4s;
+}
+
+.FileItem-main {
+  height: "4rem";
+}
+
+.FileItem-main > p {
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: "10px";
+  max-width: "80%";
+  justify-content: space-around;
+  text-overflow: ellipsis;
+}
+
+.FileItem-icon {
+  position: flex-end;
+  cursor: pointer;
+}

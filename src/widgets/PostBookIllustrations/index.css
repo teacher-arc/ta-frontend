@@ -1,0 +1,13 @@
+.PostBook-images {
+  position: inherit;
+  width: 100%;
+}
+
+.PostBook-illustration {
+  position: absolute;
+  z-index: 2;
+  bottom: 2%;
+  right: 2%;
+  max-height: 440px;
+  max-width: 330px;
+}
