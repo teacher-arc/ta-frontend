@@ -1,15 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { VStack, Input, Button } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import "./index.css";
 import { createUser } from "./../../services/auth.service";
 
 function SignUpForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { register, errors, handleSubmit } = useForm();
   const handleFormSubmit = async () => {
     try {
       const response = await createUser({

@@ -24,16 +24,17 @@ export const updateUser = (payload) =>
     data: payload,
   });
 
-export const login = (payload) =>
-  axios({
-    method: "get",
+export const login = (payload) => {
+  console.log(payload);
+  return axios({
+    method: "post",
     url: `${BASE_URL}${API_PATHS.LOGIN}`,
     data: payload,
   });
+};
 
-export const getUserByEmail = (payload) =>
+export const getUserByEmail = (EMAIL) =>
   axios({
-    method: "patch",
-    url: `${BASE_URL}${API_PATHS.GET_USER_BY_EMAIL}`,
-    data: payload,
+    method: "get",
+    url: `${BASE_URL}${API_PATHS.GET_USER_BY_EMAIL}${EMAIL}`,
   });
