@@ -43,6 +43,10 @@ const Button = {
       padding: "4px",
       cursor: "pointer",
     },
+    live: {
+      bg: "#FFE070",
+      color: "#444444",
+    },
   },
   defaultProps: {},
 };

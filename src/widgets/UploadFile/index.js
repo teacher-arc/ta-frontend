@@ -2,7 +2,7 @@ import React from "react";
 import UploadButton from "./UploadButton";
 import FileList from "./FileList";
 import { Box } from "@chakra-ui/react";
-function UploadFile() {
+function UploadFile({ fileType }) {
   return (
     <div>
       <Box
@@ -16,8 +16,8 @@ function UploadFile() {
         margin="10px"
         bgColor="#FFFFFF"
       >
-        <UploadButton />
-        <FileList />
+        <UploadButton fileType={fileType} />
+        <FileList fileType={fileType} />
       </Box>
     </div>
   );
