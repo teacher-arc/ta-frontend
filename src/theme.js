@@ -47,6 +47,20 @@ const Button = {
       bg: "#FFE070",
       color: "#444444",
     },
+    signup: {
+      bg: "#B8D2FF",
+      color: "#444444",
+      _hover: {
+        bg: "#003286",
+        color: "#FFFFFF",
+      },
+      cursor: "pointer",
+    },
+    landingpage: {
+      bg: "#003286",
+      color: "#FFFFFF",
+      boxShadow: "0px 4px 44px 0px #00000040",
+    },
   },
   defaultProps: {},
 };

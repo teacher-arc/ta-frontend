@@ -12,7 +12,6 @@ import { useForm } from "react-hook-form";
 import "./index.css";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUser, userSelector, clearState } from "./../../slices/user.slice";
-import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { PROFILE } from "./../../routes";
 function LoginForm() {

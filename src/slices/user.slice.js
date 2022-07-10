@@ -1,5 +1,28 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { login, createUser, getUserByEmail } from "../services/auth.service";
+
+export const createUserThunk = createAsyncThunk(
+  "user/createUser",
+  async ({ email, password }, thunkAPI) => {
+    try {
+      const response = await createUser({
+        email,
+        password,
+      });
+
+      console.log("response", response);
+      if (response.status === 200) {
+        localStorage.setItem("email", email);
+        return response;
+      } else {
+        return thunkAPI.rejectWithValue(response.data.message);
+      }
+    } catch (e) {
+      console.log("Error", e.response);
+      return thunkAPI.rejectWithValue(e.response);
+    }
+  }
+);
 export const loginUser = createAsyncThunk(
   "user/login",
   async ({ email, password }, thunkAPI) => {
@@ -14,7 +37,6 @@ export const loginUser = createAsyncThunk(
         localStorage.setItem("email", email);
         return response;
       } else {
-        console.log("line 16");
         return thunkAPI.rejectWithValue(response.data.message);
       }
     } catch (e) {
@@ -23,7 +45,6 @@ export const loginUser = createAsyncThunk(
     }
   }
 );
-
 export const getUser = createAsyncThunk(
   "user/getByEmail",
   async ({ email }, thunkAPI) => {
@@ -34,7 +55,6 @@ export const getUser = createAsyncThunk(
       if (response.status === 200) {
         return response;
       } else {
-        console.log("line 37");
         return thunkAPI.rejectWithValue(response.data.message);
       }
     } catch (e) {
@@ -65,6 +85,20 @@ export const userSlice = createSlice({
     errorMessage: "",
   },
   reducers: {
+    logOut: (state) => {
+      localStorage.removeItem("email");
+      state.email = "";
+      state.isEmailVerified = "";
+      state.userRole = "";
+      state.about = "";
+      state.course = "";
+      state.dob = "";
+      state.edOrg = "";
+      state.lastName = "";
+      state.firstName = "";
+      state.location = "";
+      state.whatsapp = "";
+    },
     clearState: (state) => {
       state.isError = false;
       state.isSuccess = false;
@@ -74,6 +108,22 @@ export const userSlice = createSlice({
   },
   extraReducers: {
     // Extra reducer comes here
+    [createUserThunk.fulfilled]: (state, { payload }) => {
+      console.log(payload);
+      state.email = payload.email;
+      state.username = payload.name;
+      state.isFetching = false;
+      state.isSuccess = true;
+      return state;
+    },
+    [createUserThunk.rejected]: (state, { payload }) => {
+      state.isFetching = false;
+      state.isError = true;
+      state.errorMessage = payload.data.message;
+    },
+    [createUserThunk.pending]: (state) => {
+      state.isFetching = true;
+    },
     [loginUser.fulfilled]: (state, { payload }) => {
       console.log(payload);
       state.email = payload.email;
@@ -120,6 +170,6 @@ export const userSlice = createSlice({
   },
 });
 
-export const { clearState } = userSlice.actions;
+export const { clearState, logOut } = userSlice.actions;
 
 export const userSelector = (state) => state.user;

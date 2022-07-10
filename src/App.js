@@ -5,11 +5,11 @@ import { Routes, Route, Redirect } from "react-router-dom";
 import ProfilePage from "./pages/ProfilePage";
 import WalletPage from "./pages/WalletPage";
 import NavigationBar from "./widgets/NavigationBar";
-import Home from "./pages/Home";
 import * as ROUTELIST from "./routes";
 import MentorMeet from "./pages/PostBookPage";
 import PostAssignment from "./pages/PostBookPage/PostAssignment";
 import BookLiveSession from "./pages/PostBookPage/BookLiveSession";
+import LandingPage from "./pages/LandingPage/index";
 function App() {
   const [files, setFiles] = useState([{ name: " myFile.pdf" }]);
 
@@ -23,10 +23,11 @@ function App() {
      <FileList/> */}
       <NavigationBar />
       <Routes>
-        <Route path={ROUTELIST.HOME} element={<Home />} />
+        <Route path={ROUTELIST.HOME} element={<LandingPage />} />
         <Route path={ROUTELIST.AUTH} element={<Auth />} />
         <Route path={ROUTELIST.MENTOR_MEET} element={<MentorMeet />}></Route>
         <Route path={ROUTELIST.POST_ASSIGNMENT} element={<PostAssignment />} />
+
         <Route
           path={ROUTELIST.BOOK_LIVE_SESSION}
           element={<BookLiveSession />}
