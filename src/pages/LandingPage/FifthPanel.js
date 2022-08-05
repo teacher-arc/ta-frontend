@@ -18,7 +18,7 @@ import {
 function FifthPanel() {
   return (
     <div>
-      <Box mx="200px" marginBottom="60px">
+      <Box mx={{ sm: "20px", lg: "200px" }} marginBottom="60px">
         <Text
           fontSize="3xl"
           fontWeight="extrabold"
@@ -26,7 +26,7 @@ function FifthPanel() {
           color="black"
           marginBottom="30px"
         >
-          Is there a problem you are facing?
+          How can mentorship help you achieve your goals?
         </Text>
         <Text
           fontSize="md"
@@ -36,15 +36,14 @@ function FifthPanel() {
           paddingLeft="4px"
           marginBottom="60px"
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          When you’ve got a mentor, you learning journey becomes easier. Now the
+          easy part isn’t that the work load reduces. The mentor is not there to
+          do your job. The mentor is there so that you can be unblocked on
+          whatever’s blocking you fast and get your game going. The mentor’s
+          duty is to prevent you from making all the common mistakes others
+          make, which leads to inefficient use of time. A mentor helps you to
+          make use the full efficiency of your time, so that you can bring out
+          the best of you and fast.
         </Text>
         <Text
           fontSize="3xl"
@@ -53,7 +52,7 @@ function FifthPanel() {
           color="black"
           marginBottom="30px"
         >
-          Is there a problem you are facing?
+          TeacherArc - The go to platform for active mentorship{" "}
         </Text>
         <Text
           fontSize="md"
@@ -63,15 +62,10 @@ function FifthPanel() {
           paddingLeft="4px"
           marginBottom="60px"
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          TeacherArc has a goal to help you reach greater heights by providing
+          you the mentor everyone dreams of. Get a chance to collaborate with
+          one of our mentors for guiding through your assignment and study like
+          never before!
         </Text>
         <Center>
           <Button variant="landingpage">Read More</Button>

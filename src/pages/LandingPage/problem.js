@@ -11,56 +11,54 @@ import prob9 from "./../../Assets/prob9.png";
 export const problems = [
   {
     image: prob1,
-    title: "Live Session",
+    title: "Assignment Aid",
     detail:
-      "Take the help of experts who will break your complex problems into simpler solutions with TeacherArc’s live sessions.",
+      "Get assignment aid whenever  you need with Teacher Arc’s round the clock support",
   },
   {
     image: prob2,
-    title: "Live Session",
-    detail:
-      "Take the help of experts who will break your complex problems into simpler solutions with TeacherArc’s live sessions.",
+    title: "Live Sessions",
+    detail: "Request for doubt clearance session from subject experts",
   },
   {
     image: prob3,
-    title: "Live Session",
-    detail:
-      "Take the help of experts who will break your complex problems into simpler solutions with TeacherArc’s live sessions.",
+    title: "Lab report Guidance",
+    detail: "Get help from top class lab assistants",
   },
   {
     image: prob4,
-    title: "Live Session",
+    title: "Project Report Help",
     detail:
-      "Take the help of experts who will break your complex problems into simpler solutions with TeacherArc’s live sessions.",
+      "Get a chance at creating the best project reports with the guidance of our subject matter experts",
   },
   {
     image: prob5,
-    title: "Live Session",
+    title: "speech writing",
     detail:
-      "Take the help of experts who will break your complex problems into simpler solutions with TeacherArc’s live sessions.",
+      "Present to your associates in style by getting the guidance of our subject matter experts",
   },
   {
     image: prob6,
-    title: "Live Session",
+    title: "essay writing",
     detail:
-      "Take the help of experts who will break your complex problems into simpler solutions with TeacherArc’s live sessions.",
+      "Writing has never been easier with the guidance of our Literature mentors",
   },
   {
     image: prob7,
-    title: "Live Session",
+    title: "Presentation Guidance",
     detail:
-      "Take the help of experts who will break your complex problems into simpler solutions with TeacherArc’s live sessions.",
+      "Create stunning presentations which are not only expressive, but informative and grasp everyone’s attention",
   },
   {
     image: prob8,
-    title: "Live Session",
+    title: "Recorded Tutorials",
     detail:
-      "Take the help of experts who will break your complex problems into simpler solutions with TeacherArc’s live sessions.",
+      "Need a tutorial? Look no further, give us the details of the subject matter you need and we’ll set you up!",
   },
   {
     image: prob9,
-    title: "Live Session",
+    title: "Math Help",
     detail:
-      "Take the help of experts who will break your complex problems into simpler solutions with TeacherArc’s live sessions.",
+      "Math is something that frightens the lot of us. No more! Get guidance from our Math experts today!",
   },
 ];

@@ -24,11 +24,10 @@ export const assignmentUpload = (payload) =>
     data: payload,
   });
 
-export const getAssignmentByUserEmail = (payload) =>
+export const getAssignmentByUserEmail = (EMAIL) =>
   axios({
     method: "get",
-    url: `${BASE_URL}${API_PATHS.GET_ASSIGNMENT_BY_USER_EMAIL}`,
-    data: payload,
+    url: `${BASE_URL}${API_PATHS.GET_ASSIGNMENT_BY_USER_EMAIL}/${EMAIL}`,
   });
 export const getAssignment = (payload) =>
   axios({

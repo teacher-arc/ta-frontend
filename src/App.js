@@ -33,7 +33,7 @@ function App() {
           element={<BookLiveSession />}
         />
         <Route path="profile" element={<ProfilePage />} />
-        <Route path="wallet" element={<WalletPage />} />
+        <Route path={ROUTELIST.WALLET} element={<WalletPage />} />
         {/* <Route path="postassignment" element={<PostAssignment/>}/>
         <Route path="booklivesession" element={<BookLiveSession/>}/>
         <Route path="assignmentdetails" element={<AssignmentDetails/>}/>

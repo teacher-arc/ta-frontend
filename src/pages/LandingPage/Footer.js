@@ -21,14 +21,15 @@ function Footer() {
   return (
     <div>
       <Box
-        backgroundImage={footerBackgroundImage}
+        backgroundImage={{ lg: footerBackgroundImage }}
+        backgroundColor="#6995E0"
         width="100%"
         height="auto"
-        backgroundSize="cover"
+        backgroundSize="fit"
       >
-        <Box mx="200px" py="100px">
-          <SimpleGrid columns={4}>
-            <Box my="20px">
+        <Box mx={{ sm: "20px", lg: "200px" }} py={{ sm: "20px", lg: "100px" }}>
+          <SimpleGrid columns={3}>
+            <Box my={{ sm: "5px", lg: "20px" }}>
               <Text
                 color="#FFC905"
                 lineHeight="3rem"
@@ -56,14 +57,14 @@ function Footer() {
                 Sevice 1
               </Text>
             </Box>
-            <Box my="20px">
+            <Box my={{ sm: "5px", lg: "20px" }}>
               <Text
                 color="#FFC905"
                 lineHeight="3rem"
                 fontSize="lg"
                 fontWeight="bold"
               >
-                Services
+                Features
               </Text>
               <Text lineHeight="3rem" color="#ffffff">
                 Sevice 1
@@ -84,60 +85,14 @@ function Footer() {
                 Sevice 1
               </Text>
             </Box>
-            <Box my="20px">
+            <Box my={{ sm: "5px", lg: "20px" }}>
               <Text
                 color="#FFC905"
                 lineHeight="3rem"
                 fontSize="lg"
                 fontWeight="bold"
               >
-                Services
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-            </Box>
-            <Box my="20px">
-              <Text
-                color="#FFC905"
-                lineHeight="3rem"
-                fontSize="lg"
-                fontWeight="bold"
-              >
-                Services
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
+                About
               </Text>
             </Box>
           </SimpleGrid>
@@ -149,7 +104,7 @@ function Footer() {
             color="#FFC905"
             marginBottom="30px"
           >
-            All Rights Reserved.
+            ©All Rights Reserved.
           </Text>
           <Text
             fontSize="md"
@@ -160,15 +115,9 @@ function Footer() {
             marginBottom="60px"
             color="#FFFFFF"
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            TeacherArc reserves all rights to the services they provide and the
+            content they share, which is not intended to be used commercially,
+            but only for the sole purpose of learning.
           </Text>
         </Box>
       </Box>

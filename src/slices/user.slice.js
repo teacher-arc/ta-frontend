@@ -1,5 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { getAssignmentByUserEmail } from "../services/assignment.service";
 import { login, createUser, getUserByEmail } from "../services/auth.service";
+import {
+  getTransactionByEmail,
+  getTransactionById,
+} from "./../services/transaction.service";
 
 export const createUserThunk = createAsyncThunk(
   "user/createUser",
@@ -10,7 +15,6 @@ export const createUserThunk = createAsyncThunk(
         password,
       });
 
-      console.log("response", response);
       if (response.status === 200) {
         localStorage.setItem("email", email);
         return response;
@@ -31,8 +35,6 @@ export const loginUser = createAsyncThunk(
         email,
         password,
       });
-
-      console.log("response", response);
       if (response.status === 200) {
         localStorage.setItem("email", email);
         return response;
@@ -64,6 +66,43 @@ export const getUser = createAsyncThunk(
   }
 );
 
+export const getTransactionByEmailThunk = createAsyncThunk(
+  "transaction/getByEmail",
+  async ({ email }, thunkAPI) => {
+    try {
+      const response = await getTransactionByEmail(email);
+
+      console.log("response", response);
+      if (response.status === 200) {
+        return response;
+      } else {
+        return thunkAPI.rejectWithValue(response.data.message);
+      }
+    } catch (e) {
+      console.log("Error", e.response);
+      return thunkAPI.rejectWithValue(e.response);
+    }
+  }
+);
+
+export const getAssignmentsByEmailThunk = createAsyncThunk(
+  "transaction/getByEmail",
+  async ({ email }, thunkAPI) => {
+    try {
+      const response = await getAssignmentByUserEmail(email);
+
+      if (response.status === 200) {
+        return response;
+      } else {
+        return thunkAPI.rejectWithValue(response.data.message);
+      }
+    } catch (e) {
+      console.log("Error", e.response);
+      return thunkAPI.rejectWithValue(e.response);
+    }
+  }
+);
+
 export const userSlice = createSlice({
   name: "user",
   initialState: {
@@ -79,6 +118,8 @@ export const userSlice = createSlice({
     firstName: "",
     location: "",
     whatsapp: "",
+    balance: "",
+    transactions: [],
     isFetching: false,
     isSuccess: false,
     isError: false,
@@ -98,6 +139,7 @@ export const userSlice = createSlice({
       state.firstName = "";
       state.location = "";
       state.whatsapp = "";
+      state.balance = "";
     },
     clearState: (state) => {
       state.isError = false;
@@ -109,7 +151,6 @@ export const userSlice = createSlice({
   extraReducers: {
     // Extra reducer comes here
     [createUserThunk.fulfilled]: (state, { payload }) => {
-      console.log(payload);
       state.email = payload.email;
       state.username = payload.name;
       state.isFetching = false;
@@ -125,7 +166,6 @@ export const userSlice = createSlice({
       state.isFetching = true;
     },
     [loginUser.fulfilled]: (state, { payload }) => {
-      console.log(payload);
       state.email = payload.email;
       state.username = payload.name;
       state.isFetching = false;
@@ -142,7 +182,6 @@ export const userSlice = createSlice({
     },
     //getUser
     [getUser.fulfilled]: (state, { payload }) => {
-      console.log(payload);
       state._id = payload.data.data._id;
       state.email = payload.data.data.email;
       state.isEmailVerified = payload.data.data.isEmailVerified;
@@ -155,6 +194,7 @@ export const userSlice = createSlice({
       state.firstName = payload.data.data.firstName;
       state.location = payload.data.data.location;
       state.whatsapp = payload.data.data.whatsapp;
+      state.balance = payload.data.data.balance;
       state.isFetching = false;
       state.isSuccess = true;
       return state;
@@ -165,6 +205,20 @@ export const userSlice = createSlice({
       state.errorMessage = payload.data.message;
     },
     [getUser.pending]: (state) => {
+      state.isFetching = true;
+    },
+    [getTransactionByEmailThunk.fulfilled]: (state, { payload }) => {
+      state.transactions = payload.data;
+      state.isFetching = false;
+      state.isSuccess = true;
+      return state;
+    },
+    [getTransactionByEmailThunk.rejected]: (state, { payload }) => {
+      state.isFetching = false;
+      state.isError = true;
+      state.errorMessage = payload.data.message;
+    },
+    [getTransactionByEmailThunk.pending]: (state) => {
       state.isFetching = true;
     },
   },

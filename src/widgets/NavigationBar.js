@@ -54,7 +54,9 @@ export default function NavigationBar() {
           <Link href={ROUTELIST.ABOUT}>
             <Button variant="nav">{NAV_ITEM.ABOUT}</Button>
           </Link>
-          <Button variant="nav">{NAV_ITEM.WALLET}</Button>
+          <Link href={ROUTELIST.WALLET}>
+            <Button variant="nav">{NAV_ITEM.WALLET}</Button>
+          </Link>
           <Button variant="nav">{NAV_ITEM.CONTACT}</Button>
         </HStack>
 

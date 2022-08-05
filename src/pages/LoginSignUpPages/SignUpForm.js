@@ -13,7 +13,6 @@ function SignUpForm() {
     useSelector(userSelector);
   const dispatch = useDispatch();
   const onSubmit = (data) => {
-    console.log(data.password, data.confirmPassword);
     if (data.password !== data.confirmPassword) {
       toast({
         position: "top-right",
@@ -29,7 +28,6 @@ function SignUpForm() {
   };
 
   useEffect(() => {
-    console.log(isSuccess, isFetching, isError);
     if (isSuccess) {
       toast({
         position: "top-right",

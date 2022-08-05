@@ -25,7 +25,6 @@ export const updateUser = (payload) =>
   });
 
 export const login = (payload) => {
-  console.log(payload);
   return axios({
     method: "post",
     url: `${BASE_URL}${API_PATHS.LOGIN}`,

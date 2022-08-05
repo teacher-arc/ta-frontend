@@ -37,7 +37,6 @@ function LoginForm() {
       dispatch(clearState());
     }
     if (isSuccess) {
-      console.log(isSuccess);
       navigate(PROFILE);
       dispatch(clearState());
     }

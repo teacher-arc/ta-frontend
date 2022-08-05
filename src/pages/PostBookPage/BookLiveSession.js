@@ -38,7 +38,6 @@ function BookLiveSession() {
   const onSubmit = async (data) => {
     setLoading(true);
     const payLoad = { ...data, userEmail: email, type: "LIVE_SESSION" };
-    console.log(payLoad);
     dispatch(createAssignment(payLoad));
     reset({
       description: "",

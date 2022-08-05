@@ -47,6 +47,10 @@ const Button = {
       bg: "#FFE070",
       color: "#444444",
     },
+    record: {
+      bg: "#B8D2FF",
+      color: "#FFFFFF",
+    },
     signup: {
       bg: "#B8D2FF",
       color: "#444444",
@@ -78,6 +82,12 @@ const Input = {
 };
 
 const theme = extendTheme({
+  breakpoints: {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
+  },
   fonts: {
     body: `"Exo 2", sans-serif`,
     heading: `'Fredoka', sans-serif`,

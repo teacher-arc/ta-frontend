@@ -8,15 +8,21 @@ import NavigationBar from "../../widgets/NavigationBar";
 import { useNavigate } from "react-router-dom";
 import { getUser, userSelector, clearState } from "./../../slices/user.slice";
 import { useSelector, useDispatch } from "react-redux";
+import {
+  fetchAssignmentByEmail,
+  displayAssignmentSelector,
+} from "./../../slices/displayAssignment.slice";
 const ProfilePage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { isFetching, isSuccess, isError, errorMessage } =
     useSelector(userSelector);
+  const records = useSelector(displayAssignmentSelector);
   const data = useSelector(userSelector);
   const email = localStorage.getItem("email");
   useEffect(() => {
     dispatch(getUser({ email }));
+    dispatch(fetchAssignmentByEmail({ email }));
     return () => {
       dispatch(clearState());
     };
@@ -53,7 +59,7 @@ const ProfilePage = () => {
         </GridItem>
         <GridItem rowSpan={2} colSpan={2} />
         <GridItem rowSpan={2} colSpan={4} padding="24px">
-          <RecordBook />
+          <RecordBook records={records.data} />
         </GridItem>
       </Grid>
     </div>

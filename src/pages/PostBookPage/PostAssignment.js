@@ -36,7 +36,6 @@ function PostAssignment() {
   const onSubmit = async (data) => {
     setLoading(true);
     const payLoad = { ...data, userEmail: email, type: "ASSIGNMENT" };
-    console.log(payLoad);
     dispatch(createAssignment(payLoad));
     reset({
       description: "",
