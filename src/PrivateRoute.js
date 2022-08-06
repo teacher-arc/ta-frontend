@@ -1,17 +1,12 @@
 import React from "react";
 import { Navigate, Route } from "react-router-dom";
+import * as ROUTELIST from "./routes";
+export const PrivateRoute = ({ children }) => {
+  const email = localStorage.getItem("email");
 
-export const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      localStorage.getItem("email") ? (
-        <Component {...props} />
-      ) : (
-        <Navigate
-          to={{ pathname: "/login", state: { from: props.location } }}
-        />
-      )
-    }
-  />
-);
+  if (!email) {
+    return <Navigate to={ROUTELIST.AUTH} replace />;
+  }
+
+  return children;
+};
