@@ -16,7 +16,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import prob1 from "./../../Assets/prob1.png";
-function ProblemCard({ image, title, detail }) {
+function ProblemCard({ image, title, detail, id }) {
   return (
     <div>
       <Box
@@ -29,6 +29,7 @@ function ProblemCard({ image, title, detail }) {
         display="flex"
         flexDirection={"column"}
         margin={{ lg: "10px" }}
+        id={id}
       >
         <Box
           borderTopRadius="24px"
@@ -38,7 +39,7 @@ function ProblemCard({ image, title, detail }) {
           paddingTop="40px"
         >
           <Center>
-            <img src={image} height="150px" width="150px" />
+            <img src={image} height="180px" width="180px" />
           </Center>
         </Box>
         <Box
@@ -99,6 +100,7 @@ function ThirdPanel() {
                 image={problem.image}
                 title={problem.title}
                 detail={problem.detail}
+                id={problem.id}
               />
             ))}
           </SimpleGrid>

@@ -4,7 +4,8 @@ import Auth from "./pages/LoginSignUpPages";
 import { Routes, Route, Redirect } from "react-router-dom";
 import ProfilePage from "./pages/ProfilePage";
 import WalletPage from "./pages/WalletPage";
-import NavigationBar from "./widgets/NavigationBar";
+import NavigationBar from "./widgets/Navbar/NavigationBar";
+import { PrivateRoute } from "./PrivateRoute";
 import * as ROUTELIST from "./routes";
 import MentorMeet from "./pages/PostBookPage";
 import PostAssignment from "./pages/PostBookPage/PostAssignment";
@@ -18,9 +19,6 @@ function App() {
   };
   return (
     <div className="App">
-      {/* <NotificationPanel/> 
-     <UploadFile files={files} setFiles={setFiles} removeFile={removeFile}/>
-     <FileList/> */}
       <NavigationBar />
       <Routes>
         <Route path={ROUTELIST.HOME} element={<LandingPage />} />
@@ -34,10 +32,6 @@ function App() {
         />
         <Route path="profile" element={<ProfilePage />} />
         <Route path={ROUTELIST.WALLET} element={<WalletPage />} />
-        {/* <Route path="postassignment" element={<PostAssignment/>}/>
-        <Route path="booklivesession" element={<BookLiveSession/>}/>
-        <Route path="assignmentdetails" element={<AssignmentDetails/>}/>
-        <Route path="livesessiondetails" element={<LiveSessionDetails/>}/> */}
       </Routes>
     </div>
   );

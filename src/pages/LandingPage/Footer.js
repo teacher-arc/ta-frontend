@@ -15,99 +15,62 @@ import {
   Image,
   Center,
 } from "@chakra-ui/react";
+import { problems } from "./problem";
+import "./index.css";
 import footerBackgroundImage from "./../../Assets/FooterBackgroundImage.png";
 
 function Footer() {
   return (
     <div>
       <Box
-        backgroundImage={{ lg: footerBackgroundImage }}
         backgroundColor="#6995E0"
         width="100%"
         height="auto"
         backgroundSize="fit"
       >
-        <Box mx={{ sm: "20px", lg: "200px" }} py={{ sm: "20px", lg: "100px" }}>
-          <SimpleGrid columns={3}>
-            <Box my={{ sm: "5px", lg: "20px" }}>
-              <Text
-                color="#FFC905"
-                lineHeight="3rem"
-                fontSize="lg"
-                fontWeight="bold"
-              >
-                Services
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-            </Box>
-            <Box my={{ sm: "5px", lg: "20px" }}>
-              <Text
-                color="#FFC905"
-                lineHeight="3rem"
-                fontSize="lg"
-                fontWeight="bold"
-              >
-                Features
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-              <Text lineHeight="3rem" color="#ffffff">
-                Sevice 1
-              </Text>
-            </Box>
-            <Box my={{ sm: "5px", lg: "20px" }}>
-              <Text
-                color="#FFC905"
-                lineHeight="3rem"
-                fontSize="lg"
-                fontWeight="bold"
-              >
-                About
-              </Text>
-            </Box>
-          </SimpleGrid>
-
+        <Box mx={{ sm: "20px", lg: "200px" }} py={{ sm: "20px", lg: "10px" }}>
           <Text
-            fontSize="3xl"
-            fontWeight="extrabold"
-            margin="10px"
             color="#FFC905"
-            marginBottom="30px"
+            lineHeight="1rem"
+            fontSize="lg"
+            fontWeight="bold"
+            my="10px"
           >
-            ©All Rights Reserved.
+            Services
+          </Text>
+          <SimpleGrid
+            columns={{ sm: 2, lg: 3 }}
+            spacingX={{ sm: "40px", lg: "40px" }}
+          >
+            {problems.map((problem) => (
+              <Text lineHeight="3rem" color="#ffffff">
+                <a href={`#${problem.id}`} className="nostyle-anchor">
+                  {problem.title}
+                </a>
+              </Text>
+            ))}
+          </SimpleGrid>
+          <Box my={{ sm: "5px", lg: "-5px" }}>
+            <Text
+              color="#FFC905"
+              lineHeight="3rem"
+              fontSize="lg"
+              fontWeight="bold"
+            >
+              About
+            </Text>
+          </Box>
+          <Text
+            fontSize={{ sm: "xl", lg: "3xl" }}
+            fontWeight="extrabold"
+            margin="10px 5px 10px -7px"
+            color="#FFC905"
+            marginBottom={{ sm: "20px", lg: "30px" }}
+          >
+            © All Rights Reserved.
           </Text>
           <Text
-            fontSize="md"
+            fontSize={{ sm: "sm", lg: "md" }}
             margin="10px"
             as="p"
             lineHeight="1.6rem"

@@ -1,3 +1,25 @@
 .firstPanel-image {
   height: auto;
 }
+
+.second-panel {
+  height: 60px;
+  width: 100%;
+  background: rgb(212, 225, 246);
+  background: linear-gradient(
+    0deg,
+    rgba(212, 225, 246, 0.8) 45%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+figure {
+  position: relative;
+}
+figcaption {
+  position: absolute;
+  top: 15%;
+}
+
+.nostyle-anchor {
+  text-decoration: none;
+}

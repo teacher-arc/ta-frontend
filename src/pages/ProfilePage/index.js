@@ -4,7 +4,7 @@ import NameSection from "../../components/NameSection";
 import TopBanner from "../../components/TopBanner";
 import RecordBook from "../../components/RecordBook";
 import { Grid, GridItem } from "@chakra-ui/react";
-import NavigationBar from "../../widgets/NavigationBar";
+import NavigationBar from "../../widgets/Navbar/NavigationBar";
 import { useNavigate } from "react-router-dom";
 import { getUser, userSelector, clearState } from "./../../slices/user.slice";
 import { useSelector, useDispatch } from "react-redux";

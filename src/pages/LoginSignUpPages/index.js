@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavigationBar from "../../widgets/NavigationBar";
+import NavigationBar from "../../widgets/Navbar/NavigationBar";
 import SignUpIllustrations from "../../widgets/SignupIllustrations/SignUpIllustrations";
 import SignUpForm from "./SignUpForm";
 import LoginForm from "./LoginForm";
@@ -19,10 +19,10 @@ const Auth = () => {
           <Heading pl="4rem" mb="5%" pb="5%">
             Welcome
           </Heading>
-          <Link px={4} ml={16} my="5%" onClick={handleSignUpLink} >
+          <Link px={4} ml={16} my="5%" onClick={handleSignUpLink}>
             Signup
           </Link>
-          <Link px={4} ml={16} my="5%" onClick={handleLoginLink} >
+          <Link px={4} ml={16} my="5%" onClick={handleLoginLink}>
             Login
           </Link>
           {showLogin ? <LoginForm /> : <SignUpForm />}
