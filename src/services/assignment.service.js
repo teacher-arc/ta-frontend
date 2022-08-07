@@ -29,11 +29,10 @@ export const getAssignmentByUserEmail = (EMAIL) =>
     method: "get",
     url: `${BASE_URL}${API_PATHS.GET_ASSIGNMENT_BY_USER_EMAIL}/${EMAIL}`,
   });
-export const getAssignment = (payload) =>
+export const getAssignment = (ID) =>
   axios({
     method: "get",
-    url: `${BASE_URL}${API_PATHS.CREATE_USER}`,
-    data: payload,
+    url: `${BASE_URL}${API_PATHS.GET_ASSIGNMENT}/${ID}`,
   });
 
 export const patchAssignment = (payload) =>

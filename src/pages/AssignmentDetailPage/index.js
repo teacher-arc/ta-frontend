@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import RectangleIllustration from "../../widgets/RectangleIllustration";
-import { Box, Heading, Text, Center } from "@chakra-ui/react";
-function ProgressBar() {
-  return (
-    <Box
-      position="absolute"
-      borderRadius="24px"
-      margin="5%"
-      alignItems="right"
-      height="30%"
-      width="90%"
-      backgroundColor="#FFFFFF"
-    ></Box>
-  );
-}
+import { Box, Heading, Text, Center, Image } from "@chakra-ui/react";
+import ProgressBar from "./ProgressBar";
+import { useParams } from "react-router-dom";
+import { getAssignment } from "../../services/assignment.service";
+import AssignmentDetailArea from "./AssignmentDetailArea";
 function AssignmentDetailsPage() {
+  const [assignmentDetails, setAssignmentDetails] = useState({});
+  const params = useParams();
+  const id = params.id;
+  const getAssignmentById = async (id) => {
+    try {
+      const response = await getAssignment(id);
+      const assignmentDetails = response.data;
+      console.log(assignmentDetails);
+      setAssignmentDetails(assignmentDetails);
+    } catch (e) {
+      console.log("Error", e.response);
+    }
+  };
+  useEffect(() => {
+    getAssignmentById(id);
+  }, []);
+
   return (
     <div>
-      <Box pos="relative" width="100%" display="flex" zIndex="0">
+      <Box pos="relative" width="100%" display="flex" zIndex="-1">
         <RectangleIllustration />
       </Box>
 
@@ -33,9 +41,11 @@ function AssignmentDetailsPage() {
         height="70vh"
         width="60%"
         backgroundColor="#6B96E1"
-        zindex="5"
+        display="flex"
+        direction="column"
       >
         <ProgressBar />
+        <AssignmentDetailArea data={assignmentDetails} />
       </Box>
     </div>
   );
