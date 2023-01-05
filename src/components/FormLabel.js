@@ -1,5 +1,6 @@
 import { Box, Center } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function FormLabel({ name = "untitled" }) {
   return (

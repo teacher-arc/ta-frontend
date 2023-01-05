@@ -12,6 +12,8 @@ import {
   MenuItem,
 } from "@chakra-ui/react";
 import * as ROUTELIST from "../../routes";
+import { useTranslation } from "react-i18next";
+
 import Logo from "./../../Assets/Logo.png";
 import React, { useState } from "react";
 import { CgProfile } from "react-icons/cg";
@@ -31,6 +33,8 @@ const NAV_ITEM = {
 };
 
 function NavbarDesktop({ email, handleLogOut }) {
+  const { t } = useTranslation();
+
   return (
     <Flex
       w="100%"
@@ -44,22 +48,22 @@ function NavbarDesktop({ email, handleLogOut }) {
 
       <HStack as="nav">
         <Link href={ROUTELIST.HOME}>
-          <Button variant="nav">{NAV_ITEM.HOME}</Button>
+          <Button variant="nav">{t(NAV_ITEM.HOME)}</Button>
         </Link>
         <Link href={ROUTELIST.POST_ASSIGNMENT}>
-          <Button variant="nav">{NAV_ITEM.POST_ASSIGNMENT}</Button>
+          <Button variant="nav">{t(NAV_ITEM.POST_ASSIGNMENT)}</Button>
         </Link>
         <Link href={ROUTELIST.BOOK_LIVE_SESSION}>
-          <Button variant="nav">{NAV_ITEM.LIVE_SESSION}</Button>
+          <Button variant="nav">{t(NAV_ITEM.LIVE_SESSION)}</Button>
         </Link>
 
         <Link href={ROUTELIST.ABOUT}>
-          <Button variant="nav">{NAV_ITEM.ABOUT}</Button>
+          <Button variant="nav">{t(NAV_ITEM.ABOUT)}</Button>
         </Link>
         <Link href={ROUTELIST.WALLET}>
-          <Button variant="nav">{NAV_ITEM.WALLET}</Button>
+          <Button variant="nav">{t(NAV_ITEM.WALLET)}</Button>
         </Link>
-        <Button variant="nav">{NAV_ITEM.CONTACT}</Button>
+        <Button variant="nav">{t(NAV_ITEM.CONTACT)}</Button>
       </HStack>
 
       {email ? (
@@ -80,12 +84,12 @@ function NavbarDesktop({ email, handleLogOut }) {
             <Link href={ROUTELIST.PROFILE}>
               <MenuItem>Profile</MenuItem>
             </Link>
-            <MenuItem onClick={handleLogOut}>Log Out</MenuItem>
+            <MenuItem onClick={handleLogOut}>{t("Log Out")}</MenuItem>
           </MenuList>
         </Menu>
       ) : (
         <Link href={ROUTELIST.AUTH}>
-          <Button variant="signup">Signup</Button>
+          <Button variant="signup">{t("Signup")}</Button>
         </Link>
       )}
     </Flex>
@@ -93,6 +97,8 @@ function NavbarDesktop({ email, handleLogOut }) {
 }
 
 function NavbarMobile() {
+  const { t } = useTranslation();
+
   const [display, changeDisplay] = useState("none");
   return (
     <Flex
@@ -127,22 +133,22 @@ function NavbarMobile() {
 
       <Flex flexDir="column" align="center" display={display}>
         <Link href={ROUTELIST.HOME}>
-          <Button variant="nav">{NAV_ITEM.HOME}</Button>
+          <Button variant="nav">{t(NAV_ITEM.HOME)}</Button>
         </Link>
         <Link href={ROUTELIST.POST_ASSIGNMENT}>
-          <Button variant="nav">{NAV_ITEM.POST_ASSIGNMENT}</Button>
+          <Button variant="nav">{t(NAV_ITEM.POST_ASSIGNMENT)}</Button>
         </Link>
         <Link href={ROUTELIST.BOOK_LIVE_SESSION}>
-          <Button variant="nav">{NAV_ITEM.LIVE_SESSION}</Button>
+          <Button variant="nav">{t(NAV_ITEM.LIVE_SESSION)}</Button>
         </Link>
 
         <Link href={ROUTELIST.ABOUT}>
-          <Button variant="nav">{NAV_ITEM.ABOUT}</Button>
+          <Button variant="nav">{t(NAV_ITEM.ABOUT)}</Button>
         </Link>
         <Link href={ROUTELIST.WALLET}>
-          <Button variant="nav">{NAV_ITEM.WALLET}</Button>
+          <Button variant="nav">{t(NAV_ITEM.WALLET)}</Button>
         </Link>
-        <Button variant="nav">{NAV_ITEM.CONTACT}</Button>
+        <Button variant="nav">{t(NAV_ITEM.CONTACT)}</Button>
       </Flex>
     </Flex>
   );

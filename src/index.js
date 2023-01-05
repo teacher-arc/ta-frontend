@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -10,6 +11,7 @@ import store from "./store";
 import { Provider } from "react-redux";
 import "@fontsource/exo-2";
 import "@fontsource/fredoka";
+import "./i18n/config";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

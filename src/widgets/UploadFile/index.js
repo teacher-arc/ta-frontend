@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import UploadButton from "./UploadButton";
 import FileList from "./FileList";
 import { Box } from "@chakra-ui/react";

@@ -4,7 +4,7 @@ export const benefits = [
     detail: "100% verified and original solutions only",
   },
   {
-    title: "24/7 Availablity",
+    title: "24/7 Availability",
     detail: "Round the clock support",
   },
   {

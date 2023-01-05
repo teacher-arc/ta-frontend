@@ -1,10 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Box, Heading, Text, Button } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons";
 import { useSelector } from "react-redux";
 import { userSelector } from "../../slices/user.slice";
 
 function BalanceBox({ balance }) {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Box
@@ -28,7 +31,7 @@ function BalanceBox({ balance }) {
             {balance}
           </Heading>
           <Text fontSize="lg" color="#003286">
-            current Wallet Balance
+            {t(" Current Wallet Balance")}
           </Text>
         </Box>
         <Button

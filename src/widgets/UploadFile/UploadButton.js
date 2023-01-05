@@ -1,5 +1,6 @@
 import { Box, Icon, Button } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { AiFillFileAdd } from "react-icons/ai";
 import "./index.css";
 import { useSelector, useDispatch } from "react-redux";

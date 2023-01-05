@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import {
   Box,
   Button,
@@ -25,6 +27,8 @@ import PostBookIllustrations from "../../widgets/PostBookIllustrations";
 import { HOME } from "./../../routes";
 
 function PostAssignment() {
+  const { t } = useTranslation();
+
   const toast = useToast();
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -91,7 +95,7 @@ function PostAssignment() {
         >
           <Box display="flex" direction="row" paddingBottom="10px">
             <Box w="33%" h="90%">
-              <FormLabel name="Question/Instructions" />
+              <FormLabel name={t("Question/Instructions")} />
               <Textarea
                 placeHolder="Write your description..."
                 backgroundColor="#ffffff"
@@ -133,11 +137,11 @@ function PostAssignment() {
               />
             </Box>
             <Box w="33%" h="90%">
-              <FormLabel name="Question Files" />
+              <FormLabel name={t("Question Files")} />
               <UploadFile fileType="QUESTION_FILE" />
             </Box>
             <Box w="33%" h="90%">
-              <FormLabel name="Reference Material" />
+              <FormLabel name={t("Reference Material")} />
               <UploadFile fileType="REFERENCE_MATERIAL" />
             </Box>
           </Box>

@@ -9,7 +9,7 @@ export const status = [
   { img: confirmed, title: "Confirming" },
   { img: paymentreceived, title: "PaymentReceived" },
   { img: assignedtutor, title: "Assigned Tutor" },
-  { img: solutionreceived, title: "Payment Received" },
+  { img: solutionreceived, title: "Solution Received" },
 ];
 
 export const status_number = {

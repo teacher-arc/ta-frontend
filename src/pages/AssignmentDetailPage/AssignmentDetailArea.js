@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Box, Text, Icon } from "@chakra-ui/react";
 import { EditIcon, AttachmentIcon } from "@chakra-ui/icons";
 
 function EditableTextBox({ value, title, editable = false }) {
+  const { t } = useTranslation();
   return (
     <>
       <Box
@@ -14,10 +16,10 @@ function EditableTextBox({ value, title, editable = false }) {
         padding="0.4rem"
       >
         <Text as="span" fontSize="md" fontWeight="bold">
-          {title}
+          {t(title)}
         </Text>
         <Text as="span" fontSize="md">
-          {value}dsjsdif
+          {t(value)}
         </Text>
         <button as="span" variant="ghost">
           <Icon
@@ -32,6 +34,8 @@ function EditableTextBox({ value, title, editable = false }) {
   );
 }
 function AssignmentDetailArea({ data }) {
+  const { t } = useTranslation();
+
   return (
     <Box
       width="100%"
@@ -54,11 +58,15 @@ function AssignmentDetailArea({ data }) {
           paddingTop="3px"
           marginBottom="1rem"
         >
-          Details
+          {t("Details")}
         </Text>
-        <EditableTextBox value={data.title} title={"Title"} editable />
-        <EditableTextBox value={data.subject} title={"Subject"} editable />
-        <EditableTextBox value={data.price} title={"Price"} editable />
+        <EditableTextBox value={t(data.title)} title={t("Title")} editable />
+        <EditableTextBox
+          value={t(data.subject)}
+          title={t("Subject")}
+          editable
+        />
+        <EditableTextBox value={t(data.price)} title={t("Price")} editable />
       </Box>
       <Box
         width="33%"
@@ -72,7 +80,7 @@ function AssignmentDetailArea({ data }) {
           textAlign="center"
           paddingTop="3px"
         >
-          Question Files
+          {t("Question Files")}
         </Text>
       </Box>
       <Box
@@ -87,7 +95,7 @@ function AssignmentDetailArea({ data }) {
           textAlign="center"
           paddingTop="3px"
         >
-          Reference Files
+          {t("Reference Files")}
         </Text>
       </Box>
     </Box>

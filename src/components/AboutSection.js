@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Heading, Text, Box, Image } from "@chakra-ui/react";
 import profilephoto from "./../Assets/profiledummyimage.png";
 

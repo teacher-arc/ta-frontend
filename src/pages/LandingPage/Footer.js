@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   Box,
   Button,
@@ -20,6 +21,8 @@ import "./index.css";
 import footerBackgroundImage from "./../../Assets/FooterBackgroundImage.png";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Box
@@ -36,7 +39,7 @@ function Footer() {
             fontWeight="bold"
             my="10px"
           >
-            Services
+            {t("Services")}
           </Text>
           <SimpleGrid
             columns={{ sm: 2, lg: 3 }}
@@ -45,7 +48,7 @@ function Footer() {
             {problems.map((problem) => (
               <Text lineHeight="3rem" color="#ffffff">
                 <a href={`#${problem.id}`} className="nostyle-anchor">
-                  {problem.title}
+                  {t(problem.title)}
                 </a>
               </Text>
             ))}
@@ -57,7 +60,7 @@ function Footer() {
               fontSize="lg"
               fontWeight="bold"
             >
-              About
+              {t("About")}
             </Text>
           </Box>
           <Text
@@ -67,7 +70,7 @@ function Footer() {
             color="#FFC905"
             marginBottom={{ sm: "20px", lg: "30px" }}
           >
-            © All Rights Reserved.
+            {t("© All Rights Reserved.")}
           </Text>
           <Text
             fontSize={{ sm: "sm", lg: "md" }}
@@ -78,9 +81,10 @@ function Footer() {
             marginBottom="60px"
             color="#FFFFFF"
           >
-            TeacherArc reserves all rights to the services they provide and the
-            content they share, which is not intended to be used commercially,
-            but only for the sole purpose of learning.
+            {t(
+              "TeacherArc reserves all rights to the services they provide and the content they share, which is not intended to be used commercially, but only for the sole purpose of learning"
+            )}
+            .
           </Text>
         </Box>
       </Box>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { status as statuses, status_number } from "./status";
 import { Box, Heading, Text, Center, Image } from "@chakra-ui/react";
 

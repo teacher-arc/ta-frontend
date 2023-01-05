@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import NavigationBar from "../../widgets/Navbar/NavigationBar";
 import SignUpIllustrations from "../../widgets/SignupIllustrations/SignUpIllustrations";
 import SignUpForm from "./SignUpForm";
@@ -8,6 +9,8 @@ import { Routes, Route } from "react-router-dom";
 
 import "./index.css";
 const Auth = () => {
+  const { t } = useTranslation();
+
   const [showLogin, setShowLogin] = useState(false);
 
   const handleLoginLink = () => setShowLogin(true);
@@ -17,13 +20,13 @@ const Auth = () => {
       <Flex minWidth="max-content" alignItems="center" gap="2" height="90vh">
         <Box width="50%" height="100%" pt="2%">
           <Heading pl="4rem" mb="5%" pb="5%">
-            Welcome
+            {t("Welcome")}
           </Heading>
           <Link px={4} ml={16} my="5%" onClick={handleSignUpLink}>
-            Signup
+            {t("Signup")}
           </Link>
           <Link px={4} ml={16} my="5%" onClick={handleLoginLink}>
-            Login
+            {t("Login")}
           </Link>
           {showLogin ? <LoginForm /> : <SignUpForm />}
         </Box>

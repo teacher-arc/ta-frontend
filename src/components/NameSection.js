@@ -10,6 +10,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { GoLocation } from "react-icons/go";
 import illustration from "./../Assets/profileillus.svg";
 function NameSection({ name, location }) {

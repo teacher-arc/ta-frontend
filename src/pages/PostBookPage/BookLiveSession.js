@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import {
   Box,
   Button,
@@ -27,6 +29,8 @@ import PostBookIllustrations from "../../widgets/PostBookIllustrations";
 import { HOME } from "./../../routes";
 
 function BookLiveSession() {
+  const { t } = useTranslation();
+
   const toast = useToast();
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -112,7 +116,7 @@ function BookLiveSession() {
                 color="#FFFFFF"
                 mt="4px"
               />
-              Interact with real tutors in real time.
+              {t("Interact with real tutors in real time.")}
             </Text>
             <Text fontSize="xl" width="100%">
               <Icon
@@ -126,7 +130,7 @@ function BookLiveSession() {
                 color="#FFFFFF"
                 mt="4px"
               />
-              Book a session, set the duration and make payment.
+              {t("Book a session, set the duration and make payment.")}
             </Text>{" "}
             <Text fontSize="xl" width="100%">
               <Icon
@@ -140,7 +144,9 @@ function BookLiveSession() {
                 color="#FFFFFF"
                 mt="4px"
               />
-              Upload reference material and provide instructions for the tutor.{" "}
+              {t(
+                "Upload reference material and provide instructions for the tutor."
+              )}
             </Text>
             <Text fontSize="xl" width="100%">
               <Icon
@@ -155,7 +161,9 @@ function BookLiveSession() {
                 color="#FFFFFF"
                 mt="4px"
               />
-              The tutor will be ready at the session time to solve your problem.
+              {
+                "The tutor will be ready at the session time to solve your problem."
+              }
             </Text>
           </Box>
           <Box display="flex" direction="row" paddingBottom="10px">
@@ -202,11 +210,11 @@ function BookLiveSession() {
               />
             </Box>
             <Box w="33%" h="90%">
-              <FormLabel name="Question Files" />
+              <FormLabel name={t("Question Files")} />
               <UploadFile fileType="QUESTION_FILE" />
             </Box>
             <Box w="33%" h="90%">
-              <FormLabel name="Reference Material" />
+              <FormLabel name={t("Reference Material")} />
               <UploadFile fileType="REFERENCE_MATERIAL" />
             </Box>
           </Box>

@@ -14,7 +14,7 @@ export const problems = [
     image: prob1,
     title: "Assignment Aid",
     detail:
-      "Get assignment aid whenever  you need with Teacher Arc’s round the clock support",
+      "Get assignment aid whenever  you need with Teacher Arc's round the clock support",
   },
   {
     id: "livesessions",
@@ -54,7 +54,7 @@ export const problems = [
     image: prob7,
     title: "Presentation Guidance",
     detail:
-      "Create stunning presentations which are not only expressive, but informative and grasp everyone’s attention",
+      "Create stunning presentations which are not only expressive, but informative and grasp everyone's attention",
   },
   {
     id: "recorded-tutorials",

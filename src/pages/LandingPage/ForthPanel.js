@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { problems } from "./problem";
 import {
   Box,
@@ -18,6 +19,8 @@ import {
 } from "@chakra-ui/react";
 import { benefits } from "./benefits";
 function BenefitCard({ title, detail }) {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Box
@@ -40,7 +43,7 @@ function BenefitCard({ title, detail }) {
           fontWeight="extrabold"
           margin={{ sm: "4px", lg: "10px" }}
         >
-          {title}
+          {t(title)}
         </Text>
 
         <Text
@@ -50,13 +53,15 @@ function BenefitCard({ title, detail }) {
           lineHeight={{ sm: "1rem", lg: "1.6rem" }}
           paddingLeft="4px"
         >
-          {detail}
+          {t(detail)}
         </Text>
       </Box>
     </div>
   );
 }
 function ForthPanel() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Box
@@ -73,7 +78,7 @@ function ForthPanel() {
             color="blackAlpha.900"
             padding="0 10px 0 10px"
           >
-            Benefits that come with teacherarc
+            {t("Benefits that come with teacherarc")}
           </Text>
         </Center>
         <Center>
@@ -86,8 +91,9 @@ function ForthPanel() {
             padding="0 6px 0 6px"
             textAlign={"center"}
           >
-            TeacherArc has a goal to unblock students of all backgrounds so that
-            they can fulfill their career goals
+            {t(
+              "TeacherArc has a goal to unblock students of all backgrounds so that they can fulfill their career goals"
+            )}
           </Text>
         </Center>
         <Center>
@@ -99,7 +105,7 @@ function ForthPanel() {
         </Center>
         <Center>
           <Button marginTop="20px" variant="landingpage">
-            Get Help
+            {t("Get Help")}
           </Button>
         </Center>
       </Box>

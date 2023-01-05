@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Icon, Box } from "@chakra-ui/react";
 import { AiFillDelete } from "react-icons/ai";
 const FileItem = ({ file = { name: "untitled" }, handleDeleteFile }) => {

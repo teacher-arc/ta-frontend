@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { problems } from "./problem";
 import {
   Box,
@@ -16,7 +17,10 @@ import {
   Center,
 } from "@chakra-ui/react";
 import prob1 from "./../../Assets/prob1.png";
+
 function ProblemCard({ image, title, detail, id }) {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Box
@@ -50,7 +54,7 @@ function ProblemCard({ image, title, detail, id }) {
           paddingLeft="3px"
         >
           <Text fontSize="xl" fontWeight="bold" margin="10px">
-            {title}
+            {t(title)}
           </Text>
           <Center>
             <Text
@@ -60,7 +64,7 @@ function ProblemCard({ image, title, detail, id }) {
               lineHeight="1.6rem"
               paddingLeft="4px"
             >
-              {detail}
+              {t(detail)}
             </Text>
           </Center>
         </Box>
@@ -69,6 +73,8 @@ function ProblemCard({ image, title, detail, id }) {
   );
 }
 function ThirdPanel() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Box marginBottom="40px">
@@ -79,7 +85,7 @@ function ThirdPanel() {
             marginTop="40px"
             color="blackAlpha.900"
           >
-            The only place for assignment doubt clearance
+            {t("The only place for assignment doubt clearance")}
           </Text>
         </Center>
         <Center>
@@ -90,7 +96,7 @@ function ThirdPanel() {
             marginBottom="40px"
             color="blackAlpha.500"
           >
-            Recieve guidance for all sorts of assignments
+            {t("Receive guidance for all sorts of assignments")}
           </Text>
         </Center>
         <Center>

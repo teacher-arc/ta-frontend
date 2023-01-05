@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import PostAssignment from "./PostAssignment";
 import { Link } from "@chakra-ui/react";
 import * as ROUTESLIST from "./../../routes";
