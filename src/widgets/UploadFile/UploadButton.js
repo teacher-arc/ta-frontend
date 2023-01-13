@@ -1,6 +1,7 @@
 import { Box, Icon, Button } from "@chakra-ui/react";
-import React from "react";
 import { useTranslation } from "react-i18next";
+
+import React from "react";
 import { AiFillFileAdd } from "react-icons/ai";
 import "./index.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -12,6 +13,7 @@ import {
 
 function UploadFile({ fileType }) {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const uploadHandler = (event) => {
     const file = event.target.files[0];
@@ -33,7 +35,7 @@ function UploadFile({ fileType }) {
           variant="inputCustom"
           className="UploadButton-button"
         >
-          Add a File
+          {t("Add a File")}
         </Button>
       </div>
     </Box>

@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 import { VStack, Input, Button, FormControl, useToast } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import "./index.css";
@@ -7,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 function SignUpForm() {
+  const { t } = useTranslation();
+
   const { register, errors, handleSubmit } = useForm();
   const toast = useToast();
   const { isSuccess, isFetching, errorMessage, isError } =
@@ -56,7 +60,7 @@ function SignUpForm() {
             borderRadius="24px"
             boxShadow="input-shadow"
             type="email"
-            placeholder="Email Id"
+            placeholder={t("Email Id")}
             {...register("email")}
             id="email"
           />
@@ -65,7 +69,7 @@ function SignUpForm() {
             borderRadius="24px"
             boxShadow="input-shadow"
             type="password"
-            placeholder="Password"
+            placeholder={t("Password")}
             {...register("password")}
             id="password"
           />
@@ -74,7 +78,7 @@ function SignUpForm() {
             borderRadius="24px"
             boxShadow="input-shadow"
             type="password"
-            placeholder="Confirm Password"
+            placeholder={t("Confirm Password")}
             {...register("confirmPassword")}
             id="confirm_password"
           />
@@ -83,7 +87,7 @@ function SignUpForm() {
             type="submit"
             onClick={handleSubmit(onSubmit)}
           >
-            Sign Up
+            {t("Sign Up")}
           </Button>
         </VStack>
       </FormControl>

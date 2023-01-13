@@ -41,7 +41,7 @@ function BalanceBox({ balance }) {
           padding="20px"
           marginTop="20px"
         >
-          Add money to Wallet
+          {t("Add money to Wallet")}
         </Button>
       </Box>
     </div>

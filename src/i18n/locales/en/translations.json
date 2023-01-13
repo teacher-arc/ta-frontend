@@ -96,5 +96,20 @@
   "Initiate and complete the advance payment process": "Initiate and complete the advance payment process",
 
   "Get Aid": "Get Aid",
-  "Receive your aid in due time": "Receive your aid in due time"
+  "Receive your aid in due time": "Receive your aid in due time",
+
+  "Reference Material":"Reference Material",
+  "Write your description...":"Write your description...",
+  "The tutor will be ready at the session time to solve your problem.":"The tutor will be ready at the session time to solve your problem."
+
+  ,"Add money to Wallet":"Add money to Wallet",
+  "Transaction Details":"Transaction Details",
+  "Summary":"Summary",
+  "Value":"Value",
+  "Sign Up":"Sign Up",
+  "Email Id":"Email Id",
+  "Password":"Password",
+  "Confirm Password":"Confirm Password",
+  "Add a File":"Add a File",
+  "Subject Name":"Subject Name"
 }

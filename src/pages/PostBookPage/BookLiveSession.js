@@ -161,16 +161,16 @@ function BookLiveSession() {
                 color="#FFFFFF"
                 mt="4px"
               />
-              {
+              {t(
                 "The tutor will be ready at the session time to solve your problem."
-              }
+              )}
             </Text>
           </Box>
           <Box display="flex" direction="row" paddingBottom="10px">
             <Box w="33%" h="90%">
-              <FormLabel name="Question/Instructions" />
+              <FormLabel name={t("Question/Instructions")} />
               <Textarea
-                placeHolder="Write your description..."
+                placeHolder={t("Write your description...")}
                 backgroundColor="#ffffff"
                 borderRadius="24px"
                 width="90%"
@@ -179,7 +179,7 @@ function BookLiveSession() {
                 {...register("description")}
               />
               <Input
-                placeHolder="Title"
+                placeHolder={t("Title")}
                 borderRadius="24px"
                 mt="1.5rem"
                 width="90%"
@@ -189,7 +189,7 @@ function BookLiveSession() {
                 {...register("title")}
               />
               <Input
-                placeHolder="Subject Name"
+                placeHolder={t("Subject Name")}
                 borderRadius="24px"
                 mt="1.5rem"
                 width="90%"

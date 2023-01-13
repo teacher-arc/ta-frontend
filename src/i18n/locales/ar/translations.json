@@ -95,5 +95,18 @@
   "Initiate and complete the advance payment process": "ابدأ واستكمل عملية الدفع المسبق",
 
   "Get Aid": "احصل على المساعدة",
-  "Receive your aid in due time": "احصل على مساعدتك في الوقت المناسب"
+  "Receive your aid in due time": "احصل على مساعدتك في الوقت المناسب",
+
+  "Reference Material":"المواد المرجعية",
+  "Write your description...":"اكتب الوصف الخاص بك ...",
+  "Add money to Wallet":"إضافة أموال إلى المحفظة",
+  "Transaction Details":"تفاصيل الصفقه",
+  "Summary":"ملخص",
+  "Value":"قيمة",
+  "Sign Up":"اشتراك",
+  "Email Id":"عنوان الايميل",
+  "Password":"كلمة المرور",
+  "Confirm Password":"تأكيد كلمة المرور",
+  "Add a File":"إضافة ملف",
+  "Subject Name":"اسم الموضوع"
 }

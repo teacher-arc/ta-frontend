@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 import {
   VStack,
   Input,
@@ -15,6 +17,8 @@ import { loginUser, userSelector, clearState } from "./../../slices/user.slice";
 import { useNavigate } from "react-router-dom";
 import { PROFILE } from "./../../routes";
 function LoginForm() {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { register, errors, handleSubmit, reset } = useForm();
@@ -52,7 +56,7 @@ function LoginForm() {
             boxShadow="input-shadow"
             color="#3C71C9"
             type="email"
-            placeholder="Email Id"
+            placeholder={t("Email Id")}
             {...register("email")}
             id="email"
           />
@@ -61,7 +65,7 @@ function LoginForm() {
             borderRadius="24px"
             boxShadow="input-shadow"
             type="password"
-            placeholder="Password"
+            placeholder={t("Password")}
             {...register("password")}
             id="password"
           />

@@ -26,50 +26,50 @@ function App() {
         <Route
           path={ROUTELIST.MENTOR_MEET}
           element={
-            <PrivateRoute>
-              <MentorMeet />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <MentorMeet />
+            // </PrivateRoute>
           }
         ></Route>
         <Route
           path={ROUTELIST.POST_ASSIGNMENT}
           element={
-            <PrivateRoute>
-              <PostAssignment />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <PostAssignment />
+            // </PrivateRoute>
           }
         />
 
         <Route
           path={ROUTELIST.BOOK_LIVE_SESSION}
           element={
-            <PrivateRoute>
-              <BookLiveSession />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <BookLiveSession />
+            // </PrivateRoute>
           }
         />
         <Route
           path="profile"
           element={
-            <PrivateRoute>
-              <ProfilePage />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <ProfilePage />
+            // </PrivateRoute>
           }
         />
         <Route
           path={ROUTELIST.WALLET}
           element={
-            <PrivateRoute>
-              <WalletPage />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <WalletPage />
+            // </PrivateRoute>
           }
         />
         <Route
           path={ROUTELIST.ASSIGNMENT_DETAILS}
           element={
-            <PrivateRoute>
-              <AssignmentDetailsPage />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <AssignmentDetailsPage />
+            // </PrivateRoute>
           }
         />
       </Routes>

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import RectangleIllustration from "../../widgets/RectangleIllustration";
 import { Box, Heading, Text, Center } from "@chakra-ui/react";
 import TableRow from "./TableRow";
@@ -12,8 +13,9 @@ import {
 } from "./../../slices/user.slice";
 import "./index.css";
 const WalletPage = () => {
+  const { t } = useTranslation();
+
   const data = useSelector(userSelector);
-  console.log("data", data);
   const email = localStorage.getItem("email");
   const dispatch = useDispatch();
   const { transactions } = data;
@@ -41,7 +43,7 @@ const WalletPage = () => {
         <RectangleIllustration />
       </Box>
       <Box position="relative" alignItems="right" marginLeft="35%">
-        <Heading as="h6">Transaction Details</Heading>
+        <Heading as="h6">{t("Transaction Details")}</Heading>
         <Box
           className="walletpage-table-container"
           position="relative"
@@ -71,10 +73,10 @@ const WalletPage = () => {
             bg="#003286"
           >
             <Text fontSize="lg" color="#FFFFFF">
-              Summary
+              {t("Summary")}
             </Text>
             <Text fontSize="lg" color="#FFFFFF">
-              Value
+              {t("Value")}
             </Text>
           </Box>
           {transactions.length > 0 ? tableData : empty}

@@ -97,7 +97,7 @@ function PostAssignment() {
             <Box w="33%" h="90%">
               <FormLabel name={t("Question/Instructions")} />
               <Textarea
-                placeHolder="Write your description..."
+                placeHolder={t("Write your description...")}
                 backgroundColor="#ffffff"
                 borderRadius="24px"
                 width="90%"
@@ -106,7 +106,7 @@ function PostAssignment() {
                 {...register("description")}
               />
               <Input
-                placeHolder="Title"
+                placeHolder={t("Title")}
                 borderRadius="24px"
                 mt="1.5rem"
                 width="90%"
@@ -116,7 +116,7 @@ function PostAssignment() {
                 {...register("title")}
               />
               <Input
-                placeHolder="Subject Name"
+                placeHolder={t("Subject Name")}
                 borderRadius="24px"
                 mt="1.5rem"
                 width="90%"
