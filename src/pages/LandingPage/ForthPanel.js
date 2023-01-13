@@ -18,6 +18,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { benefits } from "./benefits";
+
 function BenefitCard({ title, detail }) {
   const { t } = useTranslation();
 

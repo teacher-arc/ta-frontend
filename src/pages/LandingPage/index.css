@@ -3,8 +3,6 @@
 }
 
 .second-panel {
-  height: 60px;
-  width: 100%;
   background: rgb(212, 225, 246);
   background: linear-gradient(
     0deg,
@@ -22,4 +20,16 @@ figcaption {
 
 .nostyle-anchor {
   text-decoration: none;
+}
+
+.stepcard_circle {
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+  padding: 20px 20px 40px 20px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 18px;
+  background-color: #ffb800;
 }

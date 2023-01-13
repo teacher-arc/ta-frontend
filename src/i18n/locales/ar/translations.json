@@ -1,41 +1,41 @@
 {
-  "Home": "بيت",
-  "Post Assignment": "بعد التعيين",
+  "Home": "الصفحة الرئيسية",
+  "Post Assignment": "ارفع واجبك",
   "Live Session": "جلسة مباشرة",
   "Wallet": "محفظة",
   "Contact": "اتصال",
   "Log Out": "تسجيل خروج",
-  "Signup": "اشتراك",
+  "Signup": "تسجيل",
   "Read More": "قراءة المزيد",
   "Get Help": "احصل على مساعدة",
 
-  "Get All The Mentorship You'll Ever Need": "احصل على كل الإرشاد الذي تحتاجه",
-  "Mentorship at its best": "الإرشاد في أفضل حالاته",
+  "Get All The Mentorship You'll Ever Need": "احصل على مساعدة على كل ماتريد",
+  "Mentorship at its best": "المدرسين في أفضل حالاته",
 
-  "Receive guidance for all sorts of assignments": "تلقي إرشادات لجميع أنواع المهام",
-  "The only place for assignment doubt clearance": "المكان الوحيد لتسوية شكوك التنازل",
+  "Receive guidance for all sorts of assignments": "تلقي حلول لجميع أنواع المهام",
+  "The only place for assignment doubt clearance": "شاك في حلك ارفع واجبك ونقم بحله ",
 
-  "Assignment Aid": "المساعدة على التنازل",
+  "Assignment Aid": "المساعدة على الواجبات",
   "Get assignment aid whenever  you need with Teacher Arc's round the clock support": "احصل على مساعدة في أداء المهام متى احتجت إلى دعم Teacher Arc على مدار الساعة",
   "Live Sessions": "جلسات مباشرة",
   "Request for doubt clearance session from subject experts": "طلب جلسة إزالة الشك من الخبراء المتخصصين",
   "Lab report Guidance": "دليل تقرير المختبر",
   "Get help from top class lab assistants": "الحصول على مساعدة من أفضل مساعدي المختبرات",
-  "Project Report Help": "تعليمات تقرير المشروع",
+  "Project Report Help": "احصل على مساعدة في البحوث والمشاريع ",
   "Get a chance at creating the best project reports with the guidance of our subject matter experts": "احصل على فرصة لإنشاء أفضل تقارير المشروع بتوجيه من خبرائنا المتخصصين",
   "speech writing": "كتابة الكلام",
-  "Present to your associates in style by getting the guidance of our subject matter experts": "قدم إلى زملائك بأسلوب أنيق من خلال الحصول على إرشادات من خبراء الموضوع لدينا",
+  "Present to your associates in style by getting the guidance of our subject matter experts": "قدم إلى زملائك بأسلوب أنيق من خلال الحصول على مدرس من خبراء جميع المواد لدينا",
   "essay writing": "كتابة مقال",
-  "Writing has never been easier with the guidance of our Literature mentors": "لم تكن الكتابة أسهل من أي وقت مضى بتوجيهات من مرشدي الأدب لدينا",
+  "Writing has never been easier with the guidance of our Literature mentors": "لم تكن الكتابة أسهل من أي وقت مضى بتوجيهات من المدرسين الأدب لدينا",
   "Presentation Guidance": "دليل العرض",
   "Create stunning presentations which are not only expressive, but informative and grasp everyone's attention": "إنشاء عروض تقديمية مذهلة ليست معبرة فحسب ، بل غنية بالمعلومات وتلفت انتباه الجميع",
   "Recorded Tutorials": "دروس مسجلة",
   "Need a tutorial? Look no further, give us the details of the subject matter you need and we’ll set you up!": "هل تحتاج إلى برنامج تعليمي؟ لا مزيد من البحث ، زودنا بتفاصيل الموضوع الذي تريده وسنقوم بإعدادك!",
   "Math Help": "تعليمات الرياضيات",
-  "Math is something that frightens the lot of us. No more! Get guidance from our Math experts today!": "الرياضيات شيء يخيف الكثير منا. لا أكثر! احصل على إرشادات من خبراء الرياضيات لدينا اليوم!",
+  "Math is something that frightens the lot of us. No more! Get guidance from our Math experts today!": "الرياضيات شيء يخيف الكثير منا. لا أكثر! احصل على مدرس من خبراء الرياضيات لدينا اليوم!",
 
   "Only Original work": "العمل الأصلي فقط",
-  "100% verified and original solutions only": "100٪ حلول موثقة وأصلية فقط",
+  "100% verified and original solutions only": "100% حلول موثقة وأصلية فقط",
   "24/7 Availability": "24/7 Availability",
   "Round the clock support": "دعم على مدار الساعة",
   "Always on time": "دعم على مدار الساعة",
@@ -79,5 +79,21 @@
   "The tutor will be ready at the session time to solve your problem.": "سيكون المعلم جاهزًا في وقت الجلسة لحل مشكلتك.",
 
   "Question/Instructions": "سؤال / تعليمات",
-  " Current Wallet Balance": "رصيد المحفظة الحالي"
+  " Current Wallet Balance": "رصيد المحفظة الحالي",
+
+  
+  "Get Assignment Aid in Easy Steps": "احصل على مساعدة مهمة في خطوات سهلة",
+  "Simplicity at its Best!": "البساطة في أفضل حالاتها!",
+
+  "Register": "يسجل",
+  "Go to www.teacherarc.com/register to complete your registration": "انتقل إلى www.teacherarc.com/register لإكمال التسجيل",
+
+  "Create Order": "إنشاء النظام",
+  "Add your assignment details to place order for assignment aid": "أضف تفاصيل المهمة الخاصة بك لوضع طلب للحصول على مساعدة التعيين",
+
+  "Pay": "دفع",
+  "Initiate and complete the advance payment process": "ابدأ واستكمل عملية الدفع المسبق",
+
+  "Get Aid": "احصل على المساعدة",
+  "Receive your aid in due time": "احصل على مساعدتك في الوقت المناسب"
 }

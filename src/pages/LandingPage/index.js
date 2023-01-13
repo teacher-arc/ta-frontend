@@ -10,6 +10,7 @@ import FifthPanel from "./FifthPanel";
 import { Text, Image } from "@chakra-ui/react";
 import Footer from "./Footer";
 import "./index.css";
+import SecondPanel from "./SecondPanel";
 function LandingPage() {
   const { t } = useTranslation();
 
@@ -42,8 +43,7 @@ function LandingPage() {
       </figure>
       <div>
         <div className="second-panel"></div>
-        //TODO : CONVERT INTO COMPONENT
-        <img src={secondPanel} alt="firstPanel" height="80vh" width="100%" />
+        <SecondPanel />
       </div>
       <ThirdPanel />
       <ForthPanel />
