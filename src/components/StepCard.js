@@ -19,7 +19,7 @@ import {
 import "./../index.css";
 function StepCard({ title, description, count }) {
   const { t } = useTranslation();
-  const Card = count === 4 ? LastCard : count === 1 ? FirstCard : MiddleCard;
+  const Card = MiddleCard;
 
   return (
     <Card>

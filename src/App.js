@@ -1,5 +1,7 @@
 import { useState } from "react";
 import NotificationPanel from "./components/NotificationPanel";
+import { ChakraProvider } from "@chakra-ui/react";
+import { RtlProvider } from "./rtlProvider";
 import Auth from "./pages/LoginSignUpPages";
 import { Routes, Route, Redirect } from "react-router-dom";
 import ProfilePage from "./pages/ProfilePage";
@@ -12,13 +14,18 @@ import PostAssignment from "./pages/PostBookPage/PostAssignment";
 import BookLiveSession from "./pages/PostBookPage/BookLiveSession";
 import LandingPage from "./pages/LandingPage/index";
 import AssignmentDetailsPage from "./pages/AssignmentDetailPage";
+import { useTranslation } from "react-i18next";
 function App() {
+  const { i18n } = useTranslation();
   const [files, setFiles] = useState([{ name: " myFile.pdf" }]);
   const removeFile = (fileName) => {
     setFiles(files.filter((file) => file.name !== fileName));
   };
+  document.body.dir = i18n.dir();
   return (
     <div className="App">
+      {/* <ChakraProvider> */}
+      {/* <RtlProvider> */}
       <NavigationBar />
       <Routes>
         <Route path={ROUTELIST.HOME} element={<LandingPage />} />
@@ -73,6 +80,8 @@ function App() {
           }
         />
       </Routes>
+      {/* </RtlProvider> */}
+      {/* </ChakraProvider> */}
     </div>
   );
 }

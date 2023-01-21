@@ -10,6 +10,8 @@ import {
   IconButton,
   MenuList,
   MenuItem,
+  Switch,
+  FormLabel,
 } from "@chakra-ui/react";
 import * as ROUTELIST from "../../routes";
 import { useTranslation } from "react-i18next";
@@ -33,8 +35,12 @@ const NAV_ITEM = {
 };
 
 function NavbarDesktop({ email, handleLogOut }) {
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  const [curentLanguage, setCurrentLanguage] = useState("en");
+  function changeLanguage() {
+    i18n.changeLanguage(i18n.language === "en" ? "ar" : "en");
+    setCurrentLanguage(i18n.language);
+  }
   return (
     <Flex
       w="100%"
@@ -65,40 +71,46 @@ function NavbarDesktop({ email, handleLogOut }) {
         </Link>
         <Button variant="nav">{t(NAV_ITEM.CONTACT)}</Button>
       </HStack>
-
-      {email ? (
-        <Menu>
-          <MenuButton as={Button} variant="plain">
-            <Icon
-              as={CgProfile}
-              className="FileItem-icon"
-              boxSize="10"
-              margin="4px"
-              borderRadius="24px"
-              backgroundColor="#FFE070"
-              color="#FFFFFF"
-              mt="4px"
-            />
-          </MenuButton>
-          <MenuList>
-            <Link href={ROUTELIST.PROFILE}>
-              <MenuItem>Profile</MenuItem>
-            </Link>
-            <MenuItem onClick={handleLogOut}>{t("Log Out")}</MenuItem>
-          </MenuList>
-        </Menu>
-      ) : (
-        <Link href={ROUTELIST.AUTH}>
-          <Button variant="signup">{t("Signup")}</Button>
-        </Link>
-      )}
+      <HStack>
+        {email ? (
+          <Menu>
+            <MenuButton as={Button} variant="plain">
+              <Icon
+                as={CgProfile}
+                className="FileItem-icon"
+                boxSize="10"
+                margin="4px"
+                borderRadius="24px"
+                backgroundColor="#FFE070"
+                color="#FFFFFF"
+                mt="4px"
+              />
+            </MenuButton>
+            <MenuList>
+              <Link href={ROUTELIST.PROFILE}>
+                <MenuItem>Profile</MenuItem>
+              </Link>
+              <MenuItem onClick={handleLogOut}>{t("Log Out")}</MenuItem>
+            </MenuList>
+          </Menu>
+        ) : (
+          <Link href={ROUTELIST.AUTH}>
+            <Button variant="signup">{t("Signup")}</Button>
+          </Link>
+        )}
+        <FormLabel>en</FormLabel>
+        <Switch onChange={changeLanguage} />
+        <FormLabel>ar</FormLabel>
+      </HStack>
     </Flex>
   );
 }
 
 function NavbarMobile() {
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  function changeLanguage() {
+    i18n.changeLanguage(i18n.language === "en" ? "ar" : "en");
+  }
   const [display, changeDisplay] = useState("none");
   return (
     <Flex
@@ -150,6 +162,9 @@ function NavbarMobile() {
         </Link>
         <Button variant="nav">{t(NAV_ITEM.CONTACT)}</Button>
       </Flex>
+      <FormLabel>en</FormLabel>
+      <Switch onChange={changeLanguage} />
+      <FormLabel>ar</FormLabel>
     </Flex>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Auth from "../LoginSignUpPages";
 import firstPanel from "./../../Assets/FirstPanel.png";
+import FirstPanelFlip from "./../../Assets/FirstPanelFlip.png";
 import secondPanel from "./../../Assets/SecondPanel.png";
 import ThirdPanel from "./ThirdPanel";
 import ForthPanel from "./ForthPanel";
@@ -12,13 +13,13 @@ import Footer from "./Footer";
 import "./index.css";
 import SecondPanel from "./SecondPanel";
 function LandingPage() {
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  let firstImage = i18n.dir() == "rtl" ? FirstPanelFlip : firstPanel;
   return (
     <div>
       <figure>
         <Image
-          src={firstPanel}
+          src={firstImage}
           alt="firstPanel"
           className="firstPanel-image"
           width={{ lg: "100%" }}
@@ -28,7 +29,7 @@ function LandingPage() {
             fontSize={{ sm: "14px", lg: "48px" }}
             color="#003286"
             fontWeight={{ sm: "extrabold", lg: "extrabold" }}
-            marginLeft={{ sm: "20px", lg: "70px" }}
+            margin={{ sm: "20px", lg: "70px" }}
             position="block"
             width={{ sm: "35%", lg: "30%" }}
           >
